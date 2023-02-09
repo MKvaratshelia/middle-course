@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext } from 'react';
 
 // enum интерфейс с ограниченным колличеством значений
 export enum Theme {
@@ -12,5 +12,5 @@ export interface ThemeContextProps {
   setTheme?: (theme: Theme) => void
 }
 
-export const ThemeContext = createContext<ThemeContextProps>({})
-export const LOCAL_STORAGE_THEME_KEY = 'theme'
+export const ThemeContext = createContext<ThemeContextProps>({});
+export const LOCAL_STORAGE_THEME_KEY = 'theme';

@@ -1,3 +1,3 @@
-import { lazy } from 'react'
+import { lazy } from 'react';
 // асинхронная подгрузка страницы
-export const AboutPageAsync = lazy(() => import('./AboutPage'))
+export const AboutPageAsync = lazy(() => import('./AboutPage'));
