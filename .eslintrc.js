@@ -47,6 +47,7 @@ module.exports = {
     "i18next/no-literal-string": ['warn', { markupOnly: true }],
     "linebreak-style": 'off',
     "no-trailing-spaces": 'off',
+    "arrow-body-style": "off"
   },
   globals: {
     __IS_DEV__: true,

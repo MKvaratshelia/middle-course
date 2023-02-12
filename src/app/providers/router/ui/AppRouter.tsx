@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
+
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
+import { PageLoader } from 'shared/ui/PageLoader/PageLoader';
 
 export const AppRouter = () => (
     // позволяет асинхронно подгружать страницы
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<PageLoader />}>
         <Routes>
             {Object.values(routeConfig).map(({ element, path }) => (
                 <Route key={path} path={path} element={<div className="page-wrapper">{element}</div>} />
