@@ -1,6 +1,10 @@
 /* eslint-disable */
 module.exports = {
-  env: { browser: true, es2021: true },
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true
+  },
   extends: [
     'plugin:react/recommended',
     'airbnb',
@@ -40,7 +44,9 @@ module.exports = {
     'quotes': 'off',
     'semi': 'off',
     'object-curly-newline': 'warn',
-    "i18next/no-literal-string": ['warn', { markupOnly: true }]
+    "i18next/no-literal-string": ['warn', { markupOnly: true }],
+    "linebreak-style": 'off',
+    "no-trailing-spaces": 'off',
   },
   globals: {
     __IS_DEV__: true,
