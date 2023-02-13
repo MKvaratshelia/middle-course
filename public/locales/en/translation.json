@@ -1,11 +1,10 @@
 {
-  "dsgs": "",
-  "dsgsdg": "",
-  "Главная": "Main page",
-  "О сайте": "",
-  "Перевод": "Translate",
-  "Страница не найдена": "Page not found",
-  "Тестовый пример": "Test example",
-  "Язык": "English",
-  "бля": ""
+    "Главная": "Main page",
+    "О сайте": "",
+    "Перевод": "Translate",
+    "Страница не найдена": "Page not found",
+    "Тестовый пример": "Test example",
+    "Язык": "English",
+    "Произошла ошибка": "An error has occurred",
+    "обновить страницу": "reset page"
 }
