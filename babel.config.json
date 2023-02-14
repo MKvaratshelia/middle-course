@@ -1,4 +1,13 @@
 {
-    "presets": ["@babel/preset-env", "@babel/preset-typeScript"],
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-typeScript",
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic"
+            }
+        ]
+    ],
     "plugins": ["i18next-extract"]
 }

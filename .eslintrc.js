@@ -44,12 +44,21 @@ module.exports = {
     'quotes': 'off',
     'semi': 'off',
     'object-curly-newline': 'warn',
-    "i18next/no-literal-string": ['warn', { markupOnly: true }],
+    "i18next/no-literal-string": ['warn', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
     "linebreak-style": 'off',
     "no-trailing-spaces": 'off',
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "jsx-quotes": "off",
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': 'off',
+        },
+    },
+],
 };
