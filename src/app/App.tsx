@@ -16,9 +16,10 @@ const App = () => {
       если app-show будет = true, класс станет class="app dark || light app-show"
     */
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
+            <Suspense fallback=''>
                 <NavBar />
-                <div className="content-page">
+                <div className='content-page'>
+                    123
                     <Sidebar />
                     <AppRouter />
                 </div>
