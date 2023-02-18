@@ -23,15 +23,13 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         use: {
             loader: 'babel-loader',
             options: {
-                presets: [['@babel/preset-env']],
+                presets: ['@babel/preset-env'],
                 plugins: [
                     [
                         'i18next-extract',
                         {
-                            locales: ['en', 'ru'],
-                            keyAsDefaultValue: false,
-                            // saveMissing: true,
-                            // outputPath: 'public/locales/{{locale}}/{{ns}}.json',
+                            locales: ['ru', 'en'],
+                            keyAsDefaultValue: true,
                         },
                     ],
                 ],
