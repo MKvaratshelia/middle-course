@@ -19,7 +19,6 @@ const App = () => {
             <Suspense fallback=''>
                 <NavBar />
                 <div className='content-page'>
-                    123
                     <Sidebar />
                     <AppRouter />
                 </div>
