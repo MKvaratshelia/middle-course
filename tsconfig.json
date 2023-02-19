@@ -44,3 +44,5 @@
         "./src/**/*.tsx"
     ]
 }
+
+// "test:ui:ci": "brew install graphicsmagick && npx loki --requireReference update --reactUri file:./storybook-static",
