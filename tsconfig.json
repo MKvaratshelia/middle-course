@@ -46,3 +46,5 @@
 }
 
 // "test:ui:ci": "brew install graphicsmagick && npx loki --requireReference update --reactUri file:./storybook-static",
+// "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
+// "test:ui:html": "npx reg-cli -g --from .loki/report.json --report .loki/report.html",

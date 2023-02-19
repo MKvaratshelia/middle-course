@@ -1,10 +1,11 @@
 {
     "Главная": "Main page",
-    "О сайте": "",
+    "О сайте": "About us",
     "Перевод": "Translate",
     "Страница не найдена": "Page not found",
     "Тестовый пример": "Test example",
     "Язык": "English",
     "Произошла ошибка": "An error has occurred",
-    "обновить страницу": "reset page"
+    "обновить страницу": "reset page",
+    "Короткий язык": "En"
 }
