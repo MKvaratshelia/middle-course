@@ -8,5 +8,7 @@
     "Произошла ошибка": "An error has occurred",
     "обновить страницу": "reset page",
     "Короткий язык": "En",
-    "Войти": "Sign in"
+    "Войти": "Sign in",
+    "Увеличть": "increment",
+    "Уменьшить": "decrement"
 }
