@@ -22,7 +22,6 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState(false);
     const timeRef = useRef(null);
-
     const { theme } = useTheme();
 
     const ANIMATION_DELAY = 300;
@@ -61,12 +60,17 @@ export const Modal = (props: ModalProps) => {
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
-        [cls[theme]]: true,
     };
 
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [])}>
+            <div
+                className={classNames(cls.Modal, mods, [
+                    className,
+                    theme,
+                    'app_modal',
+                ])}
+            >
                 <div onClick={closeHandler} className={cls.overlay}>
                     <div onClick={onContentClick} className={cls.content}>
                         {children}
