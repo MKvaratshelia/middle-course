@@ -40,20 +40,17 @@ export const PrimaryDark = Template.bind({});
 PrimaryDark.args = {
     title: 'Title',
     text: 'Text',
-    theme: Theme.DARK,
 };
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const onlyTitleDark = Template.bind({});
 onlyTitleDark.args = {
     title: 'Title',
-    theme: Theme.DARK,
 };
 onlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const onlyTextDark = Template.bind({});
 onlyTextDark.args = {
     text: 'Text',
-    theme: Theme.DARK,
 };
 onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];

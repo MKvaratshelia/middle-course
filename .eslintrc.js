@@ -40,7 +40,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'max-len': 'off',
-        'no-undef': 'warn',
+        'no-undef': 'off',
         quotes: 'off',
         semi: 'off',
         'object-curly-newline': 'warn',
@@ -63,6 +63,7 @@ module.exports = {
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
     },
     overrides: [
         {

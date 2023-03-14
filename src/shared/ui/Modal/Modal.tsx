@@ -5,8 +5,9 @@ import React, {
     useEffect,
     useRef,
     useState,
+    MutableRefObject,
 } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
 import cls from './Modal.module.scss';
 
@@ -23,7 +24,9 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timeRef = useRef(null);
+    const timerRef = useRef() as MutableRefObject<
+        ReturnType<typeof setTimeout>
+    >;
     const { theme } = useTheme();
 
     useEffect(() => {
@@ -37,7 +40,7 @@ export const Modal = (props: ModalProps) => {
     const closeHandler = useCallback(() => {
         if (onClose) {
             setIsClosing(true);
-            timeRef.current = setTimeout(() => {
+            timerRef.current = setTimeout(() => {
                 onClose();
                 setIsClosing(false);
             }, ANIMATION_DELAY);
@@ -60,14 +63,14 @@ export const Modal = (props: ModalProps) => {
     useEffect(() => {
         window.addEventListener('keydown', onKeyDown);
         return () => {
-            clearTimeout(timeRef.current);
+            clearTimeout(timerRef.current);
             window.removeEventListener('keydown', onKeyDown);
             // это я сам дописал
             setIsMounted(false);
         };
     }, [isOpen, onKeyDown]);
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };

@@ -62,26 +62,26 @@ OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 export const BackgroundTheme = Template.bind({});
 BackgroundTheme.args = {
     children: 'Text',
-    theme: BackgroundTheme.BACKGROUND,
+    theme: ButtonTheme.BACKGROUND,
 };
 
 export const BackgroundInverted = Template.bind({});
 BackgroundInverted.args = {
     children: 'Text',
-    theme: BackgroundTheme.BACKGROUND_INVERTED,
+    theme: ButtonTheme.BACKGROUND_INVERTED,
 };
 
 export const Squere = Template.bind({});
 Squere.args = {
     children: '>',
-    theme: BackgroundTheme.BACKGROUND_INVERTED,
+    theme: ButtonTheme.BACKGROUND_INVERTED,
     square: true,
 };
 
 export const SquereSizeL = Template.bind({});
 SquereSizeL.args = {
     children: '>',
-    theme: BackgroundTheme.BACKGROUND_INVERTED,
+    theme: ButtonTheme.BACKGROUND_INVERTED,
     square: true,
     size: ButtonSize.L,
 };
@@ -89,13 +89,13 @@ SquereSizeL.args = {
 export const SquereSizeXL = Template.bind({});
 SquereSizeXL.args = {
     children: '>',
-    theme: BackgroundTheme.BACKGROUND_INVERTED,
+    theme: ButtonTheme.BACKGROUND_INVERTED,
     square: true,
     size: ButtonSize.XL,
 };
 export const Disabled = Template.bind({});
 Disabled.args = {
     children: '>',
-    theme: BackgroundTheme.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
     disabled: true,
 };

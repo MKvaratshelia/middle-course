@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { ThunkConfig } from 'app/providers/StoreProvider';
 import axios from 'axios';
 import { User, userActions } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
@@ -12,13 +13,12 @@ interface LoginByUserNameProps {
 export const loginByUserName = createAsyncThunk<
     User,
     LoginByUserNameProps,
-    { rejectValue: string }
->('login/fetchByIdStatus', async (authData, thunkAPI) => {
+    ThunkConfig<string>
+>('login/loginByUserName', async (authData, thunkApi) => {
+    const { dispatch, extra, rejectWithValue } = thunkApi;
     try {
-        const response = await axios.post<User>(
-            'http://localhost:8000/login',
-            authData,
-        );
+        const response = await extra.api.post<User>('/login', authData);
+
         if (!response.data) {
             throw new Error();
         }
@@ -28,10 +28,10 @@ export const loginByUserName = createAsyncThunk<
             JSON.stringify(response.data),
         );
         // toolkit дает возможность вызвать диспач для асинхронных операций
-        thunkAPI.dispatch(userActions.setAuthData(response.data));
+        dispatch(userActions.setAuthData(response.data));
         return response.data;
     } catch (e) {
         console.log(e);
-        return thunkAPI.rejectWithValue('error');
+        return rejectWithValue('error');
     }
 });
