@@ -2,5 +2,13 @@
     "Профиль": "Profile",
     "Редактировать": "Edit",
     "Ваше имя": "Your name",
-    "Ваша фамилия": "Your lasname"
+    "Ваша фамилия": "Your lasname",
+    "Произошла ошибка": "An error has occurred",
+    "Перезагрузите страницу": "reload the page",
+    "Отменить": "Cancel",
+    "Возраст": "Age",
+    "Город": "City",
+    "Сохранить": "Save",
+    "Ссылка на аватар": "Avatar link",
+    "Имя пользователя": "Username"
 }
