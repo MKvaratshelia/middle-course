@@ -60,10 +60,12 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'no-multi-assign': 'off',
+        'operator-linebreak': 'warn',
     },
     globals: {
         __IS_DEV__: true,
         __API__: true,
+        __PROJECT__: true,
     },
     overrides: [
         {

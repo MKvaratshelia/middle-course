@@ -10,5 +10,11 @@
     "Город": "City",
     "Сохранить": "Save",
     "Ссылка на аватар": "Avatar link",
-    "Имя пользователя": "Username"
+    "Имя пользователя": "Username",
+    "Выберите страну": "Choose country",
+    "Выберите валюту": "Choose currency",
+    "Ошибка сервера": "server error",
+    "Заполните возраст": "add age",
+    "Заполните имя и фамилию": "add name and lastname",
+    "Данные не указаны": "data not specified"
 }
