@@ -79,6 +79,11 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     value={password}
                 />
                 <Button
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            onLoginClick();
+                        }
+                    }}
                     onClick={onLoginClick}
                     theme={ButtonTheme.OUTLINE}
                     className={cls.loginBtn}
