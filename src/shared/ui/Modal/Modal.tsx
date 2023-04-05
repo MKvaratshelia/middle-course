@@ -20,7 +20,9 @@ interface ModalProps {
 }
 
 export const Modal = (props: ModalProps) => {
-    const { className, children, isOpen, onClose, lazy } = props;
+    const {
+ className, children, isOpen, onClose, lazy, 
+} = props;
 
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);

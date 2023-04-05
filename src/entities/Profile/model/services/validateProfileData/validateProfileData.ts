@@ -5,7 +5,9 @@ export const validateProfileData = (profile?: Profile) => {
         return [ValidateProfileError.NO_DATA];
     }
     // eslint-disable-next-line operator-linebreak
-    const { age, country, first, lastname } = profile;
+    const {
+ age, country, first, lastname, 
+} = profile;
     const errors: ValidateProfileError[] = [];
 
     if (!first || !lastname) {
