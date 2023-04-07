@@ -7,6 +7,7 @@ import ArticleIcon from 'shared/assets/icons/article-20-20.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { SidebarItemType } from '../types/sidebar';
 
+// таким образом мы получаем данные селектора getUserAuthData и можем использовать внутри getSidebarItems
 export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
     const sidebarItemsList: SidebarItemType[] = [
         {
