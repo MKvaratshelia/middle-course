@@ -7,9 +7,9 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import {
-    DinamicModuleLoader,
+    DynamicModuleLoader,
     ReducersList,
-} from 'shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
+} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
@@ -54,7 +54,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     }, [dispatch, password, username, onSuccess]);
 
     return (
-        <DinamicModuleLoader removeAfterUnmount reducers={initialReducers}>
+        <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('Форма авторизации')} />
                 {error && (
@@ -92,7 +92,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     {t('Войти')}
                 </Button>
             </div>
-        </DinamicModuleLoader>
+        </DynamicModuleLoader>
     );
 });
 

@@ -1,9 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import {
-    DinamicModuleLoader,
+    DynamicModuleLoader,
     ReducersList,
-} from 'shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
+} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -134,10 +134,10 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     }
 
     return (
-        <DinamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames(cls.ArticleDetails, {}, [className])}>
                 {content}
             </div>
-        </DinamicModuleLoader>
+        </DynamicModuleLoader>
     );
 });

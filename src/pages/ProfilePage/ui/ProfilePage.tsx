@@ -1,9 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import {
-    DinamicModuleLoader,
+    DynamicModuleLoader,
     ReducersList,
-} from 'shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
+} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     fetchProfileData,
     getProfileError,
@@ -16,13 +16,15 @@ import {
     profileReducer,
     ValidateProfileError,
 } from 'entities/Profile';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useParams } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -40,6 +42,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
     const validateErrors = useSelector(getProfileValidateErrors);
+    const { id } = useParams<{ id: string }>();
 
     const validateErrorsTranslate = {
         [ValidateProfileError.SERVER_ERROR]: t('Ошибка сервера'),
@@ -52,11 +55,12 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     };
 
     const dispatch = useAppDispatch();
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
+
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));
         }
-    }, [dispatch]);
+    });
 
     const onChangeFirstname = useCallback(
         (value?: string) => {
@@ -117,12 +121,12 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     );
 
     return (
-        <DinamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
 
-                {validateErrors?.length
-                    && validateErrors.map((err) => {
+                {validateErrors?.length &&
+                    validateErrors.map((err) => {
                         return (
                             <Text
                                 key={err}
@@ -146,7 +150,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                     readonly={readonly}
                 />
             </div>
-        </DinamicModuleLoader>
+        </DynamicModuleLoader>
     );
 };
 
