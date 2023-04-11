@@ -13,12 +13,12 @@ interface StoreProviderProps {
 
 // делаем провайдер передаем в него стор
 export const StoreProvider = (props: StoreProviderProps) => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const { children, initialState, asyncReducers } = props;
     const store = createReduxStore(
         initialState as StateSchema,
         asyncReducers as ReducersMapObject<StateSchema>,
-        navigate,
+        // navigate,
     );
     return <Provider store={store}>{children}</Provider>;
 };
