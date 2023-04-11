@@ -62,6 +62,7 @@ module.exports = {
         'no-multi-assign': 'off',
         'operator-linebreak': 'warn',
         'react/no-array-index-key': 'off',
+        'function-paren-newline': 'off',
     },
     globals: {
         __IS_DEV__: true,

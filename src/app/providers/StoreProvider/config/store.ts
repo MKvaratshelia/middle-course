@@ -5,6 +5,7 @@ import { NavigateOptions, To } from 'react-router-dom';
 import { CombinedState, Reducer } from 'redux';
 import { $api } from 'shared/api/api';
 // import { loginReducer } from 'features/AuthByUsername';
+import { uiReducer } from 'features/UI';
 import { createReducerManager } from './reducerManager';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 
@@ -17,6 +18,7 @@ export function createReduxStore(
         ...asyncReducers,
         counter: counterReducer,
         user: userReducer,
+        ui: uiReducer,
 
         // loginForm: loginReducer,
     };
