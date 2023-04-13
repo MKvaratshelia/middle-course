@@ -8,13 +8,14 @@ import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetai
 import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
 import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
 import { uiReducer } from 'features/UI';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsComments: articleDetailsCommentsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
     ui: uiReducer,
 };
 // eslint-disable-next-line operator-linebreak
