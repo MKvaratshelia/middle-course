@@ -1,5 +1,12 @@
 {
     "Статья не найдена": "Article not found",
     "Произошла ошибка при загрузке статьи.": "An error occurred while discovering the articles.",
-    "Комментарии": "Comments"
+    "Комментарии": "Comments",
+    "Все статьи": "All articles",
+    "Айти": "It",
+    "Экономика": "Economics",
+    "Наука": "Science",
+    "возрастанию": "asc",
+    "по": "по",
+    "убыванию": "desc"
 }

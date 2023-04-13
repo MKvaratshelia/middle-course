@@ -54,7 +54,9 @@ export const Page = (props: PageProps) => {
         >
             {children}
             {/* реф тригер, дойдя до него сработает callback */}
-            <div ref={triggerRef} />
+            {onScrollEnd ? (
+                <div className={cls.trigger} ref={triggerRef} />
+            ) : null}
         </section>
     );
 };
