@@ -11,8 +11,8 @@ import {
     ArticleView,
 } from 'entities/Article';
 import { SortOrder } from 'shared/types';
-import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
+import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 
 // Функция, которая создает набор предварительно созданных редьюсеров и селекторов для выполнения операций CRUD над структурой нормализованного состояния, содержащей экземпляры объекта данных определенного типа. Эти функции редуктора могут быть переданы как редукторы case в createReducerи createSlice. Их также можно использовать в качестве «мутирующих» вспомогательных функций внутри createReducerи createSlice.
