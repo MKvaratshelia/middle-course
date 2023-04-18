@@ -52,7 +52,18 @@ module.exports = {
         'object-curly-newline': 'warn',
         'i18next/no-literal-string': [
             'warn',
-            { markupOnly: true, ignoreAttribute: ['data-testid'] },
+            {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'data-testid',
+                    'to',
+                    'target',
+                    'justify',
+                    'align',
+                    'direction',
+                    'gap',
+                ],
+            },
         ],
         'linebreak-style': 'off',
         'no-trailing-spaces': 'off',
