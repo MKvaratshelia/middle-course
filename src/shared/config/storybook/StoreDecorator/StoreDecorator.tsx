@@ -9,6 +9,7 @@ import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addC
 import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
 import { uiReducer } from 'features/UI';
 import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
+import { articlesPageReducer } from 'pages/ArticlesPage/model/slices/articlesPageSlice';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
@@ -16,6 +17,7 @@ const defaultAsyncReducers: ReducersList = {
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
     articleDetailsPage: articleDetailsPageReducer,
+    articlesPage: articlesPageReducer,
     ui: uiReducer,
 };
 // eslint-disable-next-line operator-linebreak
