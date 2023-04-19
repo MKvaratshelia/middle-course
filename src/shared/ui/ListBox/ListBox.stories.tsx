@@ -9,38 +9,58 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        (Story) => <div style={{ padding: 100 }}><Story /></div>,
+    ],
 } as ComponentMeta<typeof ListBox>;
 
-const Template: ComponentStory<typeof ListBox> = (args) => (
-    <ListBox {...args} />
-);
+const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
+    value: '123',
     items: [
-        { value: 'dsg', content: 'dsg' },
-        { value: 'dsg', content: 'dsg' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
-    label: '235325',
-    value: '235',
 };
-export const DirectionTop = Template.bind({});
-DirectionTop.args = {
+
+export const topLeft = Template.bind({});
+topLeft.args = {
+    direction: 'top left',
+    value: '123',
     items: [
-        { value: 'dsg', content: 'dsg' },
-        { value: 'dsg', content: 'dsg' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
-    label: '235325',
-    value: '235',
-    direction: 'top',
 };
-export const readonly = Template.bind({});
-readonly.args = {
+
+export const topRight = Template.bind({});
+topRight.args = {
+    direction: 'top right',
+    value: '123',
     items: [
-        { value: 'dsg', content: 'dsg' },
-        { value: 'dsg', content: 'dsg' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
-    label: '235325',
-    value: '235',
-    readonly: true,
+};
+
+export const bottomLeft = Template.bind({});
+bottomLeft.args = {
+    direction: 'bottom left',
+    value: '123',
+    items: [
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
+    ],
+};
+
+export const bottomRight = Template.bind({});
+bottomRight.args = {
+    direction: 'bottom right',
+    value: '123',
+    items: [
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
+    ],
 };
