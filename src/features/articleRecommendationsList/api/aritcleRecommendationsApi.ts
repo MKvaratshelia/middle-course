@@ -1,0 +1,18 @@
+import { rtkApi } from 'shared/api/rtkApi';
+// делаем запрос по эндпоинту и передаем параметр, функция возвращает хук в котором мы имеем данные, ошибку и лоадинг статус
+
+const recommendationsApi = rtkApi.injectEndpoints({
+    endpoints: (build) => ({
+        getArticleRecommendationsList: build.query({
+            query: (limit) => ({
+                url: '/articles',
+                params: {
+                    _limit: limit,
+                },
+            }),
+        }),
+    }),
+});
+
+export const useArticleRecommendationsList =
+    recommendationsApi.useGetArticleRecommendationsListQuery;

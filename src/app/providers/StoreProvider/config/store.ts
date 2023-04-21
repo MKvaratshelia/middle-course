@@ -6,6 +6,7 @@ import { CombinedState, Reducer } from 'redux';
 import { $api } from 'shared/api/api';
 // import { loginReducer } from 'features/AuthByUsername';
 import { uiReducer } from 'features/UI';
+import { rtkApi } from 'shared/api/rtkApi';
 import { createReducerManager } from './reducerManager';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 
@@ -19,6 +20,7 @@ export function createReduxStore(
         counter: counterReducer,
         user: userReducer,
         ui: uiReducer,
+        [rtkApi.reducerPath]: rtkApi.reducer,
 
         // loginForm: loginReducer,
     };
@@ -39,7 +41,7 @@ export function createReduxStore(
                 thunk: {
                     extraArgument: extraArg,
                 },
-            }),
+            }).concat(rtkApi.middleware),
     });
 
     // @ts-ignore
