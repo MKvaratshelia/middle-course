@@ -142,6 +142,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             <VStack
                 gap='16'
                 className={classNames(cls.ArticleDetails, {}, [className])}
+                max
             >
                 {content}
             </VStack>
