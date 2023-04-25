@@ -5,7 +5,11 @@ import { Article } from 'entities/Article';
 import {
     ArticleBlockType,
     ArticleType,
-} from 'entities/Article/model/types/article';
+} from 'entities/Article/model/consts/articleConsts';
+// import {
+//     ArticleBlockType,
+//     ArticleType,
+// } from 'entities/Article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
