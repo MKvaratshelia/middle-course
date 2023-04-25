@@ -4,7 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { memo, useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserAuthData, userActions } from 'entities/User';
+import {
+    getUserAuthData,
+    userActions,
+    isUserAdmin,
+    isUserManager,
+} from 'entities/User';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
@@ -19,6 +24,8 @@ export const NavBar = memo(({ className }: NavBarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
+    const isAdmin = useSelector(isUserAdmin);
+    const isManager = useSelector(isUserManager);
 
     const dispatch = useDispatch();
     const onCloseModal = useCallback(() => {
@@ -32,6 +39,8 @@ export const NavBar = memo(({ className }: NavBarProps) => {
     const onLogout = useCallback(() => {
         dispatch(userActions.logout());
     }, [dispatch]);
+
+    const isAdminPanelAvailable = isAdmin || isManager;
 
     if (authData) {
         return (
@@ -51,7 +60,16 @@ export const NavBar = memo(({ className }: NavBarProps) => {
                 <Dropdown
                     direction='bottom left'
                     className={cls.dropdown}
+                    // развернули массив и сделали условие если true то массив с одним элементом, если нет то пустой
                     items={[
+                        ...(isAdminPanelAvailable
+                            ? [
+                                  {
+                                      content: t('Админка'),
+                                      href: RoutePath.admin_panel,
+                                  },
+                              ]
+                            : []),
                         {
                             content: t('Профиль'),
                             href: RoutePath.profile + authData.id,
