@@ -1,4 +1,27 @@
-.NavBar {
+// .NavBar {
+//     width: 100%;
+//     height: var(--navbar-height);
+//     background: var(--inverted-bg-color);
+//     display: flex;
+//     align-items: center;
+//     padding: 20px;
+// }
+
+// .links,
+// .actions {
+//     margin-left: auto;
+// }
+
+// .mainlink {
+//     margin-right: 15px;
+// }
+
+// .appName {
+//     width: var(--sidebar-width);
+//     margin-left: 15px;
+// }
+
+.Navbar {
     width: 100%;
     height: var(--navbar-height);
     background: var(--inverted-bg-color);
@@ -8,11 +31,11 @@
 }
 
 .links,
-.dropdown {
+.actions {
     margin-left: auto;
 }
 
-.mainlink {
+.mainLink {
     margin-right: 15px;
 }
 
