@@ -1,4 +1,3 @@
-import { useTheme } from 'app/providers/ThemeProvider';
 import React, {
     ReactNode,
     useCallback,
@@ -7,8 +6,9 @@ import React, {
     useState,
     MutableRefObject,
 } from 'react';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { useModal } from 'shared/lib/hooks/useModal/useModal';
+import { useTheme } from '@/app/providers/ThemeProvider';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 import { Overlay } from '../Overlay/Overlay';
@@ -78,7 +78,9 @@ export const Modal = (props: ModalProps) => {
     // if (lazy && !isMounted) {
     //     return null;
     // }
-    const { className, children, isOpen, onClose, lazy } = props;
+    const {
+ className, children, isOpen, onClose, lazy, 
+} = props;
 
     const { close, isClosing, isMounted } = useModal({
         animationDelay: ANIMATION_DELAY,

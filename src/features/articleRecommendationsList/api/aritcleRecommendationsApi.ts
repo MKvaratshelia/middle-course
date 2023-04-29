@@ -1,5 +1,5 @@
-import { Article } from 'entities/Article';
-import { rtkApi } from 'shared/api/rtkApi';
+import { Article } from '@/entities/Article';
+import { rtkApi } from '@/shared/api/rtkApi';
 // делаем запрос по эндпоинту и передаем параметр, функция возвращает хук в котором мы имеем данные, ошибку и лоадинг статус
 
 const recommendationsApi = rtkApi.injectEndpoints({
@@ -15,5 +15,4 @@ const recommendationsApi = rtkApi.injectEndpoints({
     }),
 });
 
-export const useArticleRecommendationsList =
-    recommendationsApi.useGetArticleRecommendationsListQuery;
+export const useArticleRecommendationsList = recommendationsApi.useGetArticleRecommendationsListQuery;

@@ -1,4 +1,4 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { getLoginError } from './getLoginError';
 
 // делаем стейт, в функцию передаем стейт возвращает строку error

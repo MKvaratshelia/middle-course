@@ -1,4 +1,4 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 
 // получаем состояние весь стэйт счетчика но не его значение
 // функция которая получает стэйт и возвращает стэйт

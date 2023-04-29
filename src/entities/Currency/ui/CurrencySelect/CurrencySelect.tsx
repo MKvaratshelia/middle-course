@@ -1,8 +1,8 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 // import { ListBox } from 'shared/ui/ListBox/ListBox';
-import { ListBox } from 'shared/ui/Popups';
+import { ListBox } from '@/shared/ui/Popups';
 import { Currency } from '../../model/types/currency';
 
 interface CurrencySelectProps {
@@ -19,7 +19,9 @@ const options = [
 ];
 
 export const CurrencySelect = memo(
-    ({ className, value, onChange, readonly }: CurrencySelectProps) => {
+    ({
+ className, value, onChange, readonly, 
+}: CurrencySelectProps) => {
         const { t } = useTranslation('profile');
 
         const onhangeHandler = useCallback(
