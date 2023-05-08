@@ -7,7 +7,7 @@ import { Notification } from '../../model/types/notification';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-    title: 'shared/NotificationList',
+    title: 'entities/Notification/NotificationList',
     component: NotificationList,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -39,6 +39,7 @@ Normal.parameters = {
                 { ...notification, id: '2' },
                 { ...notification, id: '3' },
             ],
+            delay: 2000,
         },
     ],
 };
