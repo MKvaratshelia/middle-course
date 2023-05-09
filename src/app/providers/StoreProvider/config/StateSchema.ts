@@ -7,7 +7,6 @@ import {
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 
-import { NavigateOptions, To } from 'react-router-dom';
 import { CounterSchema } from '@/entities/Counter';
 
 import { ProfileSchema } from '@/features/editableProfileCard';

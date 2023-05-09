@@ -25,6 +25,7 @@ module.exports = {
         'i18next',
         'react-hooks',
         'kvara-plugin',
+        'unused-imports',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -83,6 +84,7 @@ module.exports = {
         'operator-linebreak': 'warn',
         'react/no-array-index-key': 'off',
         'function-paren-newline': 'off',
+        'unused-imports/no-unused-imports': 'error',
         'kvara-plugin/patch-checker': ['error', { alias: '@' }],
         'kvara-plugin/layer-imports': [
             'error',
