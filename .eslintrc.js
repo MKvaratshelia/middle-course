@@ -84,6 +84,13 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'function-paren-newline': 'off',
         'kvara-plugin/patch-checker': ['error', { alias: '@' }],
+        'kvara-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         'kvara-plugin/public-api-imports': [
             'error',
             {

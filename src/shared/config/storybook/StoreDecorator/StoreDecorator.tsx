@@ -5,6 +5,7 @@ import { loginReducer } from '@/features/AuthByUsername/testing';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articleDetailsReducer } from '@/entities/Article/testing';
 import { addCommentFormReducer } from '@/features/addCommentForm/testing';
+// eslint-disable-next-line kvara-plugin/layer-imports
 import { uiReducer } from '@/features/UI';
 // import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
 import { articlesPageReducer } from '@/pages/ArticlesPage/testing';

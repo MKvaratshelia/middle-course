@@ -641,7 +641,7 @@
   "profile": [
     {
       "id": "1",
-      "first": "Miha",
+      "first": "Mihaa",
       "lastname": "Kva",
       "age": 221143,
       "currency": "EUR",
@@ -683,6 +683,13 @@
       "rate": 3,
       "feedback": "",
       "id": 3
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 3,
+      "feedback": "fdhfdh",
+      "id": 4
     }
   ],
   "profile-ratings": [
