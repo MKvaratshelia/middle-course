@@ -84,7 +84,17 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'function-paren-newline': 'off',
         'kvara-plugin/patch-checker': ['error', { alias: '@' }],
-        'kvara-plugin/public-api-imports': ['error', { alias: '@' }],
+        'kvara-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

@@ -1,23 +1,22 @@
-/* eslint-disable kvara-plugin/public-api-imports */
 /* eslint-disable indent */
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice';
+import { loginReducer } from '@/features/AuthByUsername/testing';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice';
-import { addCommentFormReducer } from '@/features/addCommentForm/model/slices/addCommentFormSlice';
-import { articleDetailsCommentsReducer } from '@/pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
+import { articleDetailsReducer } from '@/entities/Article/testing';
+import { addCommentFormReducer } from '@/features/addCommentForm/testing';
 import { uiReducer } from '@/features/UI';
-import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
-import { articlesPageReducer } from '@/pages/ArticlesPage/model/slices/articlesPageSlice';
-import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice';
+// import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
+import { articlesPageReducer } from '@/pages/ArticlesPage/testing';
+import { profileReducer } from '@/features/editableProfileCard/testing';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsPage: articleDetailsPageReducer,
+    // articleDetailsPage: articleDetailsPageReducer,
+    articleDetailsPage: articleDetailsReducer,
     articlesPage: articlesPageReducer,
     ui: uiReducer,
 };
