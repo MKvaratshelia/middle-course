@@ -6,8 +6,8 @@ import {
 
 import { Comment } from '@/entities/Comment';
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { fetchArticleById } from '@/entities/Article/model/services/fetchArticleById/fetchArticleById';
-import { Article } from '@/entities/Article';
+// import { fetchArticleById } from '@/entities/Article/model/services/fetchArticleById/fetchArticleById';
+// import { Article } from '@/entities/Article';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 
@@ -53,4 +53,5 @@ const articleDetailsCommentsSlice = createSlice({
     },
 });
 
-export const { reducer: articleDetailsCommentsReducer } = articleDetailsCommentsSlice;
+export const { reducer: articleDetailsCommentsReducer } =
+    articleDetailsCommentsSlice;

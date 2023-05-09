@@ -83,7 +83,8 @@ module.exports = {
         'operator-linebreak': 'warn',
         'react/no-array-index-key': 'off',
         'function-paren-newline': 'off',
-        'kvara-plugin/patch-checker': 'error',
+        'kvara-plugin/patch-checker': ['error', { alias: '@' }],
+        'kvara-plugin/public-api-imports': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,

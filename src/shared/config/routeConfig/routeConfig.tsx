@@ -3,7 +3,7 @@ import { AboutPage } from '@/pages/AboutPage';
 import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
 import { ArticlePage } from '@/pages/ArticlesPage';
 import { MainPage } from '@/pages/MainPage';
-import { NotFoundPage } from '@/pages/NotFoundPage/ui/NotFoundPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
 import { ProfilePage } from '@/pages/ProfilePage';
 import { ArticleEditPage } from '@/pages/ArticleEditPage';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';

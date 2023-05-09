@@ -1,3 +1,4 @@
+/* eslint-disable kvara-plugin/public-api-imports */
 /* eslint-disable indent */
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
