@@ -7,17 +7,16 @@ import { articleDetailsReducer } from '@/entities/Article/testing';
 import { addCommentFormReducer } from '@/features/addCommentForm/testing';
 // eslint-disable-next-line kvara-plugin/layer-imports
 import { uiReducer } from '@/features/UI';
-// import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
 import { articlesPageReducer } from '@/pages/ArticlesPage/testing';
 import { profileReducer } from '@/features/editableProfileCard/testing';
+import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    // articleDetailsPage: articleDetailsPageReducer,
-    articleDetailsPage: articleDetailsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
     articlesPage: articlesPageReducer,
     ui: uiReducer,
 };
