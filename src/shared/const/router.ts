@@ -11,17 +11,13 @@ export enum AppRoutes {
     // last
     NOT_FOUND = 'not_found',
 }
-// record я как бы говорю что все ключи перечисления AppRoutes это строки
 
-export const RoutePath: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: '/',
-    [AppRoutes.ABOUT]: '/about',
-    [AppRoutes.PROFILE]: '/profile/',
-    [AppRoutes.ARTICLES]: '/articles',
-    [AppRoutes.ADMIN_PANEL]: '/admin',
-    [AppRoutes.ARTICLE_DETAILS]: '/articles/',
-    [AppRoutes.ARTICLE_CREATE]: '/articles/new',
-    [AppRoutes.ARTICLE_EDIT]: '/articles/:id/edit',
-    [AppRoutes.FORBIDDEN]: '/forbidden',
-    [AppRoutes.NOT_FOUND]: '*',
-};
+export const getRouteMain = () => '/';
+export const getRouteAbout = () => '/about';
+export const getRouteProfile = (id: string) => `/profile/${id}`;
+export const getRouteArticles = () => '/articles';
+export const getRouteArticleDetails = (id: string) => `/articles/${id}`;
+export const getRouteArticleCreate = () => '/articles/new';
+export const getRouteArticleEdit = (id: string) => `/articles/${id}/edit`;
+export const getRouteAdmin = () => '/admin';
+export const getRouteForbidden = () => '/forbidden';

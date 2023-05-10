@@ -4,19 +4,24 @@ import AboutIcon from '@/shared/assets/icons/About.svg';
 import HomeIcon from '@/shared/assets/icons/Home.svg';
 import ProfileIcon from '@/shared/assets/icons/Profile.svg';
 import ArticleIcon from '@/shared/assets/icons/article-20-20.svg';
-import { RoutePath } from '@/shared/const/router';
+import {
+    getRouteAbout,
+    getRouteArticles,
+    getRouteMain,
+    getRouteProfile,
+} from '@/shared/const/router';
 import { SidebarItemType } from '../types/sidebar';
 
 // таким образом мы получаем данные селектора getUserAuthData и можем использовать внутри getSidebarItems
 export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
     const sidebarItemsList: SidebarItemType[] = [
         {
-            path: RoutePath.main,
+            path: getRouteMain(),
             Icon: HomeIcon,
             text: 'Главная',
         },
         {
-            path: RoutePath.about,
+            path: getRouteAbout(),
             Icon: AboutIcon,
             text: 'О сайте',
         },
@@ -25,13 +30,13 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
     if (userData) {
         sidebarItemsList.push(
             {
-                path: RoutePath.profile + userData.id,
+                path: getRouteProfile(userData.id),
                 Icon: ProfileIcon,
                 text: 'Профиль',
                 authOnly: true,
             },
             {
-                path: RoutePath.articles,
+                path: getRouteArticles(),
                 Icon: ArticleIcon,
                 text: 'Статьи',
                 authOnly: true,
