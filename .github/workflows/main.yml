@@ -55,7 +55,7 @@ concurrency:
     cancel-in-progress: true
 jobs:
     build-and-ui-testing:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         concurrency: ci-${{ github.ref }}
         environment:
             name: github-pages
