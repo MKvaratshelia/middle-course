@@ -1,6 +1,4 @@
-import {
- MutableRefObject, ReactNode, useRef, UIEvent, 
-} from 'react';
+import { MutableRefObject, ReactNode, useRef, UIEvent } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -11,12 +9,15 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import cls from './Page.module.scss';
+import { TestProps } from '@/shared/types/tests';
 
-interface PageProps {
+interface PageProps extends TestProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
 }
+
+export const PAGE_ID = 'PAGE_ID';
 
 export const Page = (props: PageProps) => {
     const { className, children, onScrollEnd } = props;
@@ -53,6 +54,9 @@ export const Page = (props: PageProps) => {
             ref={wrapperRef}
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
+            id={PAGE_ID}
+            // eslint-disable-next-line react/destructuring-assignment
+            data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
             {/* реф тригер, дойдя до него сработает callback */}
