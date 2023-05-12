@@ -1,4 +1,6 @@
-import { MutableRefObject, ReactNode, useRef, UIEvent } from 'react';
+import {
+ MutableRefObject, ReactNode, useRef, UIEvent, 
+} from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';

@@ -19,7 +19,9 @@ interface SelectProps<T extends string> {
 
 // export const Select = <T extends string>(props: SelectProps<T>) => {
 export const Select = typedMemo(<T extends string>(props: SelectProps<T>) => {
-    const { className, label, options, value, onChange, readonly } = props;
+    const {
+ className, label, options, value, onChange, readonly, 
+} = props;
     const mods: Mods = {};
 
     const optionsList = useMemo(() => {

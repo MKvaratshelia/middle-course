@@ -24,8 +24,8 @@ export function buildBabelLoader({ isDev, isTsx }: BuildBabelLoaderProps) {
                     ],
                     '@babel/plugin-transform-runtime',
                     // Наш плагин для бабел который удалит атрибут из jsx
-                    isTsx &&
-                        isProd && [
+                    isTsx
+                        && isProd && [
                             babelRemovePropsPlugin,
                             {
                                 props: ['data-testid'],
