@@ -1,7 +1,7 @@
 /.vscode
 /build
-/node_modules
+node_modules
 /storybook-static
-/reports
 .loki/report.html
 .loki/report.json
+/reports/unit
