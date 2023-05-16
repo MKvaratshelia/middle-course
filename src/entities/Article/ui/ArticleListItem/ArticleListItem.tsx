@@ -27,9 +27,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const {
- className, article, view, target, 
-} = props;
+    const { className, article, view, target } = props;
     const { t } = useTranslation();
 
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
@@ -47,6 +45,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
         return (
             <div
+                data-testid='ArticleListItem'
                 className={classNames(cls.ArticleListItem, {}, [
                     className,
                     cls[view],
@@ -93,6 +92,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
+            data-testid='ArticleListItem'
             target={target}
             to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [
