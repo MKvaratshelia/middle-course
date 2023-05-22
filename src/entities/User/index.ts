@@ -10,3 +10,4 @@ export {
 export { UserRole } from './model/consts/userConsts';
 export { useJsonSettings } from './model/selectors/jsonSettings';
 export { saveJsonSettings } from './model/services/saveJsonSettings';
+export { initAuthData } from './model/services/initAuthData';
