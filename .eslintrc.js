@@ -70,6 +70,7 @@ module.exports = {
                 ],
             },
         ],
+        'react/jsx-wrap-multilines': 'off',
         'linebreak-style': 'off',
         'no-trailing-spaces': 'off',
         'arrow-body-style': 'off',
