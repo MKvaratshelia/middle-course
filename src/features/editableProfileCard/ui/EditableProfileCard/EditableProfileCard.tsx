@@ -12,7 +12,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
@@ -119,7 +119,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <VStack gap='8' max className={classNames('', {}, [className])}>
+            <VStack gap="8" max className={classNames('', {}, [className])}>
                 <EditableProfileCardHeader />
                 {validateErrors?.length &&
                     validateErrors.map((err) => (
@@ -127,7 +127,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                             key={err}
                             theme={TextTheme.ERROR}
                             text={validateErrorTranslates[err]}
-                            data-testid='EditableProfileCard.Error'
+                            data-testid="EditableProfileCard.Error"
                         />
                     ))}
                 <ProfileCard

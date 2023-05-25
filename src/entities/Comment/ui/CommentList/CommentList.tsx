@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/deprecated/Text';
 
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Comment } from '../../model/types/comment';
 
@@ -19,7 +19,7 @@ export const CommentList = memo((props: CommentListProps) => {
 
     if (isLoading) {
         return (
-            <VStack gap='16' max className={classNames('', {}, [className])}>
+            <VStack gap="16" max className={classNames('', {}, [className])}>
                 <CommentCard isLoading />
                 <CommentCard isLoading />
                 <CommentCard isLoading />
@@ -28,7 +28,7 @@ export const CommentList = memo((props: CommentListProps) => {
     }
 
     return (
-        <VStack max gap='16' className={classNames('', {}, [className])}>
+        <VStack max gap="16" className={classNames('', {}, [className])}>
             {comments?.length ? (
                 comments.map((comment) => (
                     <CommentCard

@@ -5,7 +5,7 @@ import { Text } from '@/shared/ui/deprecated/Text';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { AppLink } from '@/shared/ui/deprecated/AppLink';
 import { getRouteProfile } from '@/shared/const/router';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import cls from './CommentCard.module.scss';
 import { Comment } from '../../model/types/comment';
 
@@ -27,14 +27,14 @@ export const CommentCard = memo((props: CommentCardProps) => {
                 ])}
             >
                 <div className={cls.header}>
-                    <Skeleton width={30} height={30} border='50%' />
+                    <Skeleton width={30} height={30} border="50%" />
                     <Skeleton
                         height={16}
                         width={100}
                         className={cls.username}
                     />
                 </div>
-                <Skeleton className={cls.text} width='100%' height={50} />
+                <Skeleton className={cls.text} width="100%" height={50} />
             </div>
         );
     }
@@ -45,8 +45,8 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
     return (
         <VStack
-            data-testid='CommentCard.Content'
-            gap='8'
+            data-testid="CommentCard.Content"
+            gap="8"
             max
             className={classNames(cls.CommentCard, {}, [className])}
         >

@@ -9,7 +9,7 @@ import {
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 import { Page } from '@/widgets/Page';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
 
 import cls from './ArticleDetailsPage.module.scss';
@@ -49,11 +49,11 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
             <Page
                 className={classNames(cls.ArticleDetailsPage, {}, [className])}
             >
-                <VStack gap='16' max>
+                <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
                     <ToggleFeatures
-                        feature='isArticleRatingEnabled'
+                        feature="isArticleRatingEnabled"
                         on={<ArticleRating articleId={id} />}
                         off={<Card>{t('Оценка статей скоро появится!')}</Card>}
                     />

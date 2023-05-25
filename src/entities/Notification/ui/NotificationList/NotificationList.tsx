@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { useNotifications } from '../../api/notificationApi';
 import cls from './NotificationList.module.scss';
@@ -20,20 +20,20 @@ export const NotificationList = memo((props: NotificationListProps) => {
     if (isLoading) {
         return (
             <VStack
-                gap='16'
+                gap="16"
                 max
                 className={classNames(cls.NotificationList, {}, [className])}
             >
-                <Skeleton width='100%' border='8px' height='80px' />
-                <Skeleton width='100%' border='8px' height='80px' />
-                <Skeleton width='100%' border='8px' height='80px' />
+                <Skeleton width="100%" border="8px" height="80px" />
+                <Skeleton width="100%" border="8px" height="80px" />
+                <Skeleton width="100%" border="8px" height="80px" />
             </VStack>
         );
     }
 
     return (
         <VStack
-            gap='16'
+            gap="16"
             max
             className={classNames(cls.NotificationList, {}, [className])}
         >

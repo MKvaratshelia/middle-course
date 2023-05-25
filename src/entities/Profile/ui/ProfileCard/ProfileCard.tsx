@@ -6,7 +6,7 @@ import { Input } from '@/shared/ui/deprecated/Input';
 import { Loader } from '@/shared/ui/deprecated/Loader';
 import { Text, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
 import { CountrySelect, Country } from '@/entities/Country';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
@@ -47,7 +47,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     if (isLoading) {
         return (
             <HStack
-                justify='center'
+                justify="center"
                 max
                 className={classNames(cls.ProfileCard, {}, [
                     className,
@@ -62,7 +62,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     if (error) {
         return (
             <HStack
-                justify='center'
+                justify="center"
                 max
                 className={classNames(cls.ProfileCard, {}, [
                     className,
@@ -85,12 +85,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     return (
         <VStack
-            gap='8'
+            gap="8"
             max
             className={classNames(cls.ProfileCard, mods, [className])}
         >
             {data?.avatar && (
-                <HStack justify='center' max className={cls.avatarWrapper}>
+                <HStack justify="center" max className={cls.avatarWrapper}>
                     <Avatar src={data.avatar} />
                 </HStack>
             )}
@@ -101,7 +101,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 className={cls.input}
                 value={data?.first}
                 placeholder={t('Ваше имя')}
-                data-testid='ProfileCard.firstname'
+                data-testid="ProfileCard.firstname"
             />
             <Input
                 readonly={readonly}
@@ -109,7 +109,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 className={cls.input}
                 value={data?.lastname}
                 placeholder={t('Ваша фамилия')}
-                data-testid='ProfileCard.lastname'
+                data-testid="ProfileCard.lastname"
             />
             <Input
                 readonly={readonly}

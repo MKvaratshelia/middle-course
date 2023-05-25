@@ -16,7 +16,7 @@ import {
     ArticleView,
 } from '../../model/consts/articleConsts';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { AppImage } from '@/shared/ui/deprecated/AppImage';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 
 interface ArticleListItemProps {
@@ -45,7 +45,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
         return (
             <div
-                data-testid='ArticleListItem'
+                data-testid="ArticleListItem"
                 className={classNames(cls.ArticleListItem, {}, [
                     className,
                     cls[view],
@@ -63,7 +63,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     <Text title={article.title} className={cls.title} />
                     {types}
                     <AppImage
-                        fallback={<Skeleton width='100%' height={250} />}
+                        fallback={<Skeleton width="100%" height={250} />}
                         src={article.img}
                         className={cls.img}
                         alt={article.title}
@@ -92,7 +92,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
-            data-testid='ArticleListItem'
+            data-testid="ArticleListItem"
             target={target}
             to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [

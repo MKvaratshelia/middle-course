@@ -3,7 +3,7 @@ import { memo, useCallback, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 // import cls from './RatingCard.module.scss';
 import { Card } from '@/shared/ui/deprecated/Card';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/deprecated/Text';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { Modal } from '@/shared/ui/deprecated/Modal';
@@ -64,7 +64,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
         <>
             <Text title={feedbackTitle} />
             <Input
-                data-testid='RatingCard.Input'
+                data-testid="RatingCard.Input"
                 value={feedback}
                 onChange={setFeedback}
                 placeholder={t('Ваш отзыв')}
@@ -74,11 +74,11 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
     return (
         <Card
-            data-testid='RatingCard'
+            data-testid="RatingCard"
             max
             className={classNames('', {}, [className])}
         >
-            <VStack align='center' gap='8'>
+            <VStack align="center" gap="8">
                 <Text title={starsCount ? t('Спасибо за оценку!') : title} />
                 <StarRating
                     selectedStars={starsCount}
@@ -88,18 +88,18 @@ export const RatingCard = memo((props: RatingCardProps) => {
             </VStack>
             {!isMobile ? (
                 <Modal isOpen={isModalOpen} lazy>
-                    <VStack max gap='32'>
+                    <VStack max gap="32">
                         {modalContent}
-                        <HStack max gap='16' justify='end'>
+                        <HStack max gap="16" justify="end">
                             <Button
-                                data-testid='RatingCard.Close'
+                                data-testid="RatingCard.Close"
                                 onClick={cancelHandle}
                                 theme={ButtonTheme.OUTLINE_RED}
                             >
                                 {t('Закрыть')}
                             </Button>
                             <Button
-                                data-testid='RatingCard.Send'
+                                data-testid="RatingCard.Send"
                                 onClick={acceptHandle}
                             >
                                 {t('Отправить')}
@@ -109,7 +109,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 </Modal>
             ) : (
                 <Drawer isOpen={isModalOpen} lazy onClose={cancelHandle}>
-                    <VStack gap='32'>
+                    <VStack gap="32">
                         {modalContent}
                         <Button
                             fullWidth

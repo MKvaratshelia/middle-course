@@ -6,7 +6,7 @@ import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 import { AddCommentForm } from '@/features/addCommentForm';
 import { CommentList } from '@/entities/Comment';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
@@ -38,7 +38,7 @@ export const ArticleDetailsComments = memo(
         });
 
         return (
-            <VStack gap='16' max className={classNames('', {}, [className])}>
+            <VStack gap="16" max className={classNames('', {}, [className])}>
                 <Text size={TextSize.L} title={t('Комментарии')} />
                 <AddCommentForm onSendComment={onSendComment} />
                 <CommentList

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { HStack } from '@/shared/ui/deprecated/Stack';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/deprecated/Text';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { getUserAuthData } from '@/entities/User';
@@ -43,7 +43,7 @@ export const EditableProfileCardHeader = memo(
         return (
             <HStack
                 max
-                justify='between'
+                justify="between"
                 className={classNames('', {}, [className])}
             >
                 <Text title={t('Профиль')} />
@@ -53,23 +53,23 @@ export const EditableProfileCardHeader = memo(
                             <Button
                                 theme={ButtonTheme.OUTLINE}
                                 onClick={onEdit}
-                                data-testid='EditableProfileCardHeader.EditButton'
+                                data-testid="EditableProfileCardHeader.EditButton"
                             >
                                 {t('Редактировать')}
                             </Button>
                         ) : (
-                            <HStack gap='8'>
+                            <HStack gap="8">
                                 <Button
                                     theme={ButtonTheme.OUTLINE_RED}
                                     onClick={onCancelEdit}
-                                    data-testid='EditableProfileCardHeader.CancelButton'
+                                    data-testid="EditableProfileCardHeader.CancelButton"
                                 >
                                     {t('Отменить')}
                                 </Button>
                                 <Button
                                     theme={ButtonTheme.OUTLINE}
                                     onClick={onSave}
-                                    data-testid='EditableProfileCardHeader.SaveButton'
+                                    data-testid="EditableProfileCardHeader.SaveButton"
                                 >
                                     {t('Сохранить')}
                                 </Button>
