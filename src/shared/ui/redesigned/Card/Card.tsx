@@ -4,6 +4,7 @@ import cls from './Card.module.scss';
 
 export type CardVariant = 'normal' | 'outlined' | 'light';
 export type CardPadding = '0' | '8' | '16' | '24';
+export type CardBorder = 'round' | 'normal';
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string;
@@ -11,13 +12,14 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     variant?: CardVariant;
     max?: boolean;
     padding?: CardPadding;
+    border?: CardBorder;
 }
 
 const mapPaddingToClass: Record<CardPadding, string> = {
-    '0': 'gap_0',
-    '8': 'gap_8',
-    '16': 'gap_16',
-    '24': 'gap_24',
+    0: 'gap_0',
+    8: 'gap_8',
+    16: 'gap_16',
+    24: 'gap_24',
 };
 
 export const Card = memo((props: CardProps) => {
@@ -27,6 +29,7 @@ export const Card = memo((props: CardProps) => {
         variant = 'normal',
         max,
         padding = '8',
+        border = 'normal',
         ...otherProps
     } = props;
 
@@ -38,6 +41,7 @@ export const Card = memo((props: CardProps) => {
                 className,
                 cls[variant],
                 cls[paddingClass],
+                cls[border],
             ])}
             {...otherProps}
         >

@@ -31,5 +31,16 @@
     "У вас нет доступа к этой странице": "You do not have access to this page",
     "Ваш отзыв": "Your feedback",
     "Добро пожаловать на страницу статей": "Welcome to articles page",
-    "Здесь вы можете искать и просматривать статьи на различные темы": "Here you can search and view articles on different theme"
+    "Здесь вы можете искать и просматривать статьи на различные темы": "Here you can search and view articles on different theme",
+    "Сортировать ПО": "Sort BY",
+    "дате создания": "created date",
+    "названию": "name",
+    "просмотрам": "views",
+    "возрастанию": "ascending",
+    "по": "in",
+    "убыванию": "descending",
+    "Айти": "IT",
+    "Экономика": "Economics",
+    "Все статьи": "All articles",
+    "Наука": "Science"
 }
