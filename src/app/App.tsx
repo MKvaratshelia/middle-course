@@ -26,12 +26,12 @@ const App = () => {
 
     return (
         <ToggleFeatures
-            feature='isAppRedesigned'
+            feature="isAppRedesigned"
             off={
-                <div className={classNames('app', {}, [theme])}>
-                    <Suspense fallback=''>
+                <div id="app" className={classNames('app', {}, [theme])}>
+                    <Suspense fallback="">
                         <NavBar />
-                        <div className='content-page'>
+                        <div className="content-page">
                             <Sidebar />
                             {inited && <AppRouter />}
                         </div>
@@ -39,8 +39,11 @@ const App = () => {
                 </div>
             }
             on={
-                <div className={classNames('app_redesigned', {}, [theme])}>
-                    <Suspense fallback=''>
+                <div
+                    id="app"
+                    className={classNames('app_redesigned', {}, [theme])}
+                >
+                    <Suspense fallback="">
                         <MainLayout
                             header={<NavBar />}
                             content={<AppRouter />}
