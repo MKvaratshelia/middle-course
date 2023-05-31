@@ -620,6 +620,18 @@
       "userId": "1",
       "text": "dsgsdg",
       "id": "7jOd5Nm"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "text": "dsgsdg",
+      "id": "0Or4IgF"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "text": "gfjfgj",
+      "id": "W9EVZtz"
     }
   ],
   "users": [
@@ -750,6 +762,13 @@
       "rate": 3,
       "feedback": "fdhfdh",
       "id": 4
+    },
+    {
+      "userId": "1",
+      "articleId": "16",
+      "rate": 3,
+      "feedback": "dsgsd",
+      "id": 5
     }
   ],
   "profile-ratings": [

@@ -15,11 +15,6 @@ interface ModalProps {
     lazy?: boolean;
 }
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
-
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {

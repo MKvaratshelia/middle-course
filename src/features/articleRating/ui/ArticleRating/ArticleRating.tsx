@@ -24,7 +24,6 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         userId: userData?.id ?? '',
     });
 
-    console.log('DATA', data);
     // хук первым элементом дает функцию в которой мы отправим данные, вторым обьект с данными по запросу
     const [rateArticleMutation] = useRateArticle();
 
@@ -61,7 +60,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
     );
 
     if (isLoading) {
-        return <Skeleton width='100%' height={120} />;
+        return <Skeleton width="100%" height={120} />;
     }
 
     const rating = data?.[0];

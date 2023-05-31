@@ -19,11 +19,6 @@ interface DrawerProps {
     lazy?: boolean;
 }
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
-
 // от общей высоты окна
 const height = window.innerHeight - 100;
 
