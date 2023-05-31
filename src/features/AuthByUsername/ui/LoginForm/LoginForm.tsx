@@ -25,6 +25,7 @@ import { ToggleFeatures } from '@/shared/lib/features';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { VStack } from '@/shared/ui/redesigned/Stack';
+import { useForceUpdate } from '@/shared/lib/render/forceUpdate';
 
 export interface LoginFormProps {
     className?: string;
@@ -34,6 +35,7 @@ export interface LoginFormProps {
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
+    const forceUpdate = useForceUpdate();
 
     const username = useSelector(getLoginUsername);
     const error = useSelector(getLoginError);
@@ -58,8 +60,9 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         const result = await dispatch(loginByUserName({ username, password }));
         if (result.meta.requestStatus === 'fulfilled') {
             onSuccess();
+            forceUpdate();
         }
-    }, [dispatch, password, username, onSuccess]);
+    }, [dispatch, password, username, onSuccess, forceUpdate]);
 
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
